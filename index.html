@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Puzzle</title>
+	<link rel="stylesheet" href="game.css">
+	<link rel="shortcut icon" type="image/jpg" href="img/favicon.jpg">
+</head>
+<body>
+	<div id="chooseDifficulty" style="display: block">
+
+		<h1>Guess The Word!</h1><br><br>
+		<h3>Select A Level</h3><br><br>
+		<button class="very easy" onclick="chooseDif1()">Easy</button>
+		<button class="not difficult" onclick="chooseDif2()">Normal</button>
+		<button class="a challenge" onclick="chooseDif3()">Hard</button>
+
+</div>
+
+<div id="startButton" style="display: none">
+
+		<h2>Guess A Letter</h2><br><br>
+		<button onclick="start()">Start</button>
+		<p>Note: Some words may have a hyphen(-) For example: X-ray</p>
+
+</div>
+
+<div id="mainGame" style="display: none">
+
+<p id="question"></p>
+
+<input type="text" id="guess" maxlength="1">
+
+<div>
+		<button onclick="enterGuess()">Insert Your Guess</button>
+</div>
+
+</div>
+
+<div id="RRguess" style="display: block">
+
+<p id="rightGuess"></p>
+<p id ="wrongGuess"></p>
+<p id ="guessesLeft"></p>
+
+</div>
+
+<div id="youLose" style="display: none">
+
+		<h3>You Lose</h3>
+
+		<div>
+				<button onclick="restart()">Play again?</button>
+		</div>
+
+		<p id="correctWordWas"></p>
+
+</div>
+
+<div id="youWin" style="display: none">
+
+		<h3>You Win</h3>
+
+		<div>
+				<button onclick="restart()">Play again?</button>
+		</div>
+
+</div>
+
+
+
+	<script type="text/javascript" src="game.js"></script>
+</body>
+</html>
